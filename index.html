@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Light_line 插件发行台</title>
+  <meta name="description" content="Light_line 本地 Codex 插件展示、预览、选择与打包下载工具。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead newsprint-texture">
+    <div class="edition-bar">
+      <span>Light_line Local Edition</span>
+      <span>Vol. 0.2.0</span>
+      <span>Codex Plugin Gazette</span>
+      <span>Browser ZIP Press</span>
+    </div>
+    <div class="title-grid">
+      <div class="brand-column">
+        <p class="kicker">本地插件发行台</p>
+        <h1>Light_line</h1>
+        <p class="lead"><span class="dropcap">L</span>ight_line 把前端实践、窗口治理、BFF/RAG 接入、动效时间轴、交付审查、hooks 与 pm-skills 式 commands 汇成一套可安装、可分享、可裁剪的 Codex 插件。</p>
+      </div>
+      <aside class="front-note" aria-label="插件概览">
+        <p class="label">Plugin Facts</p>
+        <dl>
+          <div><dt>Skills</dt><dd id="skill-count">18</dd></div>
+          <div><dt>Commands</dt><dd id="command-count">5</dd></div>
+          <div><dt>Hooks</dt><dd id="hook-count">4</dd></div>
+          <div><dt>Mode</dt><dd>ZIP</dd></div>
+        </dl>
+        <p>hooks 在插件启用并信任后进入生命周期；commands 当前作为可移植工作流模板，不同于 Codex 原生 slash command</p>
+      </aside>
+    </div>
+    <div class="ticker" aria-label="发行台摘要">
+      <div class="ticker-track">
+        <span>技能不只是文字，是可复用的项目判断。</span>
+        <span>hooks 负责提醒、拦截与审查。</span>
+        <span>commands 负责把复杂任务压成可执行流程。</span>
+        <span>自定义包在浏览器端生成，无需服务端。</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="workbench" aria-labelledby="workbench-title">
+      <div class="section-head">
+        <p class="kicker">Issue No. 1</p>
+        <h2 id="workbench-title">发行工作台</h2>
+        <p>您可以先完成筛选，再观察流程图，最后预览并下载插件包。</p>
+      </div>
+
+      <div class="workbench-stack">
+        <section class="panel controls-panel focus-panel" aria-labelledby="selection-title">
+          <div class="panel-title">
+            <div>
+              <p class="label">Selection Desk</p>
+              <h3 id="selection-title">筛选与勾选</h3>
+            </div>
+            <span id="selected-total">0 selected</span>
+          </div>
+          <div class="selection-tools">
+            <div class="search-block">
+              <label class="search-label" for="search-input">检索技能、命令或钩子</label>
+              <input id="search-input" class="search-input" type="search" placeholder="例如 BFF、时间轴、交付、window">
+            </div>
+            <div class="button-row" aria-label="批量选择">
+              <button type="button" data-action="select-all">全选</button>
+              <button type="button" data-action="clear-all">清空</button>
+              <button type="button" data-action="invert-all">反选</button>
+            </div>
+            <nav class="tabs" aria-label="条目类型">
+              <button class="tab active" type="button" data-tab="skills">Skills</button>
+              <button class="tab" type="button" data-tab="commands">Commands</button>
+              <button class="tab" type="button" data-tab="hooks">Hooks</button>
+            </nav>
+          </div>
+          <div id="selection-list" class="selection-list" aria-live="polite"></div>
+        </section>
+
+        <section class="panel graph-panel focus-panel" aria-labelledby="graph-panel-title">
+          <div class="panel-title">
+            <div>
+              <p class="label">Logic Plate</p>
+              <h3 id="graph-panel-title">流程展示可视化</h3>
+            </div>
+            <span id="graph-count">0 nodes</span>
+          </div>
+          <div class="graph-toolbar" aria-label="图例">
+            <span class="legend skill">Skill</span>
+            <span class="legend command">Command</span>
+            <span class="legend hook">Hook</span>
+            <span class="legend core">Core</span>
+          </div>
+          <div class="graph-shell">
+            <svg id="logic-graph" role="img" aria-labelledby="graph-title graph-desc" viewBox="0 0 980 700" preserveAspectRatio="xMinYMin meet">
+              <title id="graph-title">Light_line 组件逻辑关系图</title>
+              <desc id="graph-desc">根据当前勾选状态实时显示 manifest、hooks、commands、skills 和插件包出口之间的关系。</desc>
+            </svg>
+          </div>
+        </section>
+
+        <section class="panel preview-panel package-panel" aria-labelledby="preview-title">
+          <div class="panel-title">
+            <div>
+              <p class="label">Preview Press</p>
+              <h3 id="preview-title">预览与打包</h3>
+            </div>
+            <span id="package-size">0 files</span>
+          </div>
+          <article id="preview-card" class="preview-card newsprint-texture"></article>
+          <div class="download-box">
+            <div>
+              <p class="label">Distribution</p>
+              <h4>把当前选择变成可带走的插件包</h4>
+              <p>完整包保留现有 Light_line 插件目录；自定义包只带上你勾选的能力，并附带选择清单。</p>
+            </div>
+            <div class="download-actions">
+              <button type="button" id="download-full" class="primary-button">下载完整插件包</button>
+              <button type="button" id="download-custom" class="secondary-button">按当前选择打包</button>
+            </div>
+          </div>
+          <div class="truth-box">
+            <p class="label">Runtime Truth</p>
+            <p><strong>Skills</strong> 是 Codex 可识别的能力单元；<strong>Hooks</strong> 是插件启用并经过信任后的生命周期自动化；<strong>Commands</strong> 在本版中是 pm-skills 式工作流模板，适合复制、改写、转成 prompt 或 skill。</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="explain-grid newsprint-texture" aria-label="设计与运行说明">
+      <div class="editorial-note">
+        <p class="kicker">Field Notes</p>
+        <h2>Light_line实用前端制作工具</h2>
+      </div>
+      <div>
+        <h3>pm-skills 的启发</h3>
+        <p>skill 是能力单元，command 是任务入口，hook 是工作流守门人。本页面把 commands 标成模板层，诚实地放进包里。</p>
+      </div>
+      <div>
+        <h3>本地插件的边界</h3>
+        <p>页面生成的是插件源码包，不直接修改你的 Codex 配置。拿到 ZIP 后，再按 Codex 当前机制安装和信任 hooks。</p>
+      </div>
+      <div>
+        <h3>前端实践的价值</h3>
+        <p>这些 skills 覆盖技术栈、组件、UI、动效、时间轴、窗口边界、BFF/RAG、图谱性能和交付门禁。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Edition: Light_line Vol. 0.2.0</span>
+    <span>Source: C:\Users\Admin\final\plugins\light-line</span>
+    <span>Output: Browser-generated ZIP</span>
+  </footer>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
