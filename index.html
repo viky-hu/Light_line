@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Light_line 鎻掍欢鍙戣鍙?/title>
-  <meta name="description" content="Light_line 鏈湴 Codex 鎻掍欢灞曠ず銆侀瑙堛€侀€夋嫨涓庢墦鍖呬笅杞藉伐鍏枫€?>
+  <title>Light_line 插件发行台</title>
+  <meta name="description" content="Light_line 本地 Codex 插件展示、预览、选择与打包下载工具。">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,11 +17,11 @@
     </div>
     <div class="title-grid">
       <div class="brand-column">
-        <p class="kicker">鏈湴鎻掍欢鍙戣鍙?/p>
+        <p class="kicker">本地插件发行台</p>
         <h1>Light_line</h1>
-        <p class="lead"><span class="dropcap">L</span>ight_line 鎶婂墠绔疄璺点€佺獥鍙ｆ不鐞嗐€丅FF/RAG 鎺ュ叆銆佸姩鏁堟椂闂磋酱銆佷氦浠樺鏌ャ€乭ooks 涓?pm-skills 寮?commands 姹囨垚涓€濂楀彲瀹夎銆佸彲鍒嗕韩銆佸彲瑁佸壀鐨?Codex 鎻掍欢銆?/p>
+        <p class="lead"><span class="dropcap">L</span>ight_line 把前端实践、窗口治理、BFF/RAG 接入、动效时间轴、交付审查、hooks 与 pm-skills 式 commands 汇成一套可安装、可分享、可裁剪的 Codex 插件。</p>
       </div>
-      <aside class="front-note" aria-label="鎻掍欢姒傝">
+      <aside class="front-note" aria-label="插件概览">
         <p class="label">Plugin Facts</p>
         <dl>
           <div><dt>Skills</dt><dd id="skill-count">18</dd></div>
@@ -29,15 +29,15 @@
           <div><dt>Hooks</dt><dd id="hook-count">4</dd></div>
           <div><dt>Mode</dt><dd>ZIP</dd></div>
         </dl>
-        <p>hooks 鍦ㄦ彃浠跺惎鐢ㄥ苟淇′换鍚庤繘鍏ョ敓鍛藉懆鏈燂紱commands 褰撳墠浣滀负鍙Щ妞嶅伐浣滄祦妯℃澘锛屼笉鍚屼簬 Codex 鍘熺敓 slash command</p>
+        <p>hooks 在插件启用并信任后进入生命周期；commands 当前作为可移植工作流模板，不同于 Codex 原生 slash command。</p>
       </aside>
     </div>
-    <div class="ticker" aria-label="鍙戣鍙版憳瑕?>
+    <div class="ticker" aria-label="发行台摘要">
       <div class="ticker-track">
-        <span>鎶€鑳戒笉鍙槸鏂囧瓧锛屾槸鍙鐢ㄧ殑椤圭洰鍒ゆ柇銆?/span>
-        <span>hooks 璐熻矗鎻愰啋銆佹嫤鎴笌瀹℃煡銆?/span>
-        <span>commands 璐熻矗鎶婂鏉備换鍔″帇鎴愬彲鎵ц娴佺▼銆?/span>
-        <span>鑷畾涔夊寘鍦ㄦ祻瑙堝櫒绔敓鎴愶紝鏃犻渶鏈嶅姟绔€?/span>
+        <span>技能不只是文字，是可复用的项目判断。</span>
+        <span>hooks 负责提醒、拦截与审查。</span>
+        <span>commands 负责把复杂任务压成可执行流程。</span>
+        <span>自定义包在浏览器端生成，无需服务端。</span>
       </div>
     </div>
   </header>
@@ -46,8 +46,8 @@
     <section class="workbench" aria-labelledby="workbench-title">
       <div class="section-head">
         <p class="kicker">Issue No. 1</p>
-        <h2 id="workbench-title">鍙戣宸ヤ綔鍙?/h2>
-        <p>鎮ㄥ彲浠ュ厛瀹屾垚绛涢€夛紝鍐嶈瀵熸祦绋嬪浘锛屾渶鍚庨瑙堝苟涓嬭浇鎻掍欢鍖呫€?/p>
+        <h2 id="workbench-title">发行工作台</h2>
+        <p>您可以先完成筛选，再观察流程图，最后预览并下载插件包。</p>
       </div>
 
       <div class="workbench-stack">
@@ -55,21 +55,21 @@
           <div class="panel-title">
             <div>
               <p class="label">Selection Desk</p>
-              <h3 id="selection-title">绛涢€変笌鍕鹃€?/h3>
+              <h3 id="selection-title">筛选与勾选</h3>
             </div>
             <span id="selected-total">0 selected</span>
           </div>
           <div class="selection-tools">
             <div class="search-block">
-              <label class="search-label" for="search-input">妫€绱㈡妧鑳姐€佸懡浠ゆ垨閽╁瓙</label>
-              <input id="search-input" class="search-input" type="search" placeholder="渚嬪 BFF銆佹椂闂磋酱銆佷氦浠樸€亀indow">
+              <label class="search-label" for="search-input">检索技能、命令或钩子</label>
+              <input id="search-input" class="search-input" type="search" placeholder="例如 BFF、时间轴、交付、window">
             </div>
-            <div class="button-row" aria-label="鎵归噺閫夋嫨">
-              <button type="button" data-action="select-all">鍏ㄩ€?/button>
-              <button type="button" data-action="clear-all">娓呯┖</button>
-              <button type="button" data-action="invert-all">鍙嶉€?/button>
+            <div class="button-row" aria-label="批量选择">
+              <button type="button" data-action="select-all">全选</button>
+              <button type="button" data-action="clear-all">清空</button>
+              <button type="button" data-action="invert-all">反选</button>
             </div>
-            <nav class="tabs" aria-label="鏉＄洰绫诲瀷">
+            <nav class="tabs" aria-label="条目类型">
               <button class="tab active" type="button" data-tab="skills">Skills</button>
               <button class="tab" type="button" data-tab="commands">Commands</button>
               <button class="tab" type="button" data-tab="hooks">Hooks</button>
@@ -82,11 +82,11 @@
           <div class="panel-title">
             <div>
               <p class="label">Logic Plate</p>
-              <h3 id="graph-panel-title">娴佺▼灞曠ず鍙鍖?/h3>
+              <h3 id="graph-panel-title">流程展示可视化</h3>
             </div>
             <span id="graph-count">0 nodes</span>
           </div>
-          <div class="graph-toolbar" aria-label="鍥句緥">
+          <div class="graph-toolbar" aria-label="图例">
             <span class="legend skill">Skill</span>
             <span class="legend command">Command</span>
             <span class="legend hook">Hook</span>
@@ -94,8 +94,8 @@
           </div>
           <div class="graph-shell">
             <svg id="logic-graph" role="img" aria-labelledby="graph-title graph-desc" viewBox="0 0 980 700" preserveAspectRatio="xMinYMin meet">
-              <title id="graph-title">Light_line 缁勪欢閫昏緫鍏崇郴鍥?/title>
-              <desc id="graph-desc">鏍规嵁褰撳墠鍕鹃€夌姸鎬佸疄鏃舵樉绀?manifest銆乭ooks銆乧ommands銆乻kills 鍜屾彃浠跺寘鍑哄彛涔嬮棿鐨勫叧绯汇€?/desc>
+              <title id="graph-title">Light_line 组件逻辑关系图</title>
+              <desc id="graph-desc">根据当前勾选状态实时显示 manifest、hooks、commands、skills 和插件包出口之间的关系。</desc>
             </svg>
           </div>
         </section>
@@ -104,7 +104,7 @@
           <div class="panel-title">
             <div>
               <p class="label">Preview Press</p>
-              <h3 id="preview-title">棰勮涓庢墦鍖?/h3>
+              <h3 id="preview-title">预览与打包</h3>
             </div>
             <span id="package-size">0 files</span>
           </div>
@@ -112,38 +112,38 @@
           <div class="download-box">
             <div>
               <p class="label">Distribution</p>
-              <h4>鎶婂綋鍓嶉€夋嫨鍙樻垚鍙甫璧扮殑鎻掍欢鍖?/h4>
-              <p>瀹屾暣鍖呬繚鐣欑幇鏈?Light_line 鎻掍欢鐩綍锛涜嚜瀹氫箟鍖呭彧甯︿笂浣犲嬀閫夌殑鑳藉姏锛屽苟闄勫甫閫夋嫨娓呭崟銆?/p>
+              <h4>把当前选择变成可带走的插件包</h4>
+              <p>完整包保留现有 Light_line 插件目录；自定义包只带上你勾选的能力，并附带选择清单。</p>
             </div>
             <div class="download-actions">
-              <button type="button" id="download-full" class="primary-button">涓嬭浇瀹屾暣鎻掍欢鍖?/button>
-              <button type="button" id="download-custom" class="secondary-button">鎸夊綋鍓嶉€夋嫨鎵撳寘</button>
+              <button type="button" id="download-full" class="primary-button">下载完整插件包</button>
+              <button type="button" id="download-custom" class="secondary-button">按当前选择打包</button>
             </div>
           </div>
           <div class="truth-box">
             <p class="label">Runtime Truth</p>
-            <p><strong>Skills</strong> 鏄?Codex 鍙瘑鍒殑鑳藉姏鍗曞厓锛?strong>Hooks</strong> 鏄彃浠跺惎鐢ㄥ苟缁忚繃淇′换鍚庣殑鐢熷懡鍛ㄦ湡鑷姩鍖栵紱<strong>Commands</strong> 鍦ㄦ湰鐗堜腑鏄?pm-skills 寮忓伐浣滄祦妯℃澘锛岄€傚悎澶嶅埗銆佹敼鍐欍€佽浆鎴?prompt 鎴?skill銆?/p>
+            <p><strong>Skills</strong> 是 Codex 可识别的能力单元；<strong>Hooks</strong> 是插件启用并经过信任后的生命周期自动化；<strong>Commands</strong> 在本版中是 pm-skills 式工作流模板，适合复制、改写、转成 prompt 或 skill。</p>
           </div>
         </section>
       </div>
     </section>
 
-    <section class="explain-grid newsprint-texture" aria-label="璁捐涓庤繍琛岃鏄?>
+    <section class="explain-grid newsprint-texture" aria-label="设计与运行说明">
       <div class="editorial-note">
         <p class="kicker">Field Notes</p>
-        <h2>Lightline瀹炵敤鍓嶇鍒朵綔宸ュ叿</h2>
+        <h2>Light_line实用前端制作工具</h2>
       </div>
       <div>
-        <h3>pm-skills 鐨勫惎鍙?/h3>
-        <p>skill 鏄兘鍔涘崟鍏冿紝command 鏄换鍔″叆鍙ｏ紝hook 鏄伐浣滄祦瀹堥棬浜恒€傛湰椤甸潰鎶?commands 鏍囨垚妯℃澘灞傦紝璇氬疄鍦版斁杩涘寘閲屻€?/p>
+        <h3>pm-skills 的启发</h3>
+        <p>skill 是能力单元，command 是任务入口，hook 是工作流守门人。本页面把 commands 标成模板层，诚实地放进包里。</p>
       </div>
       <div>
-        <h3>鏈湴鎻掍欢鐨勮竟鐣?/h3>
-        <p>椤甸潰鐢熸垚鐨勬槸鎻掍欢婧愮爜鍖咃紝涓嶇洿鎺ヤ慨鏀逛綘鐨?Codex 閰嶇疆銆傛嬁鍒?ZIP 鍚庯紝鍐嶆寜 Codex 褰撳墠鏈哄埗瀹夎鍜屼俊浠?hooks銆?/p>
+        <h3>本地插件的边界</h3>
+        <p>页面生成的是插件源码包，不直接修改你的 Codex 配置。拿到 ZIP 后，再按 Codex 当前机制安装和信任 hooks。</p>
       </div>
       <div>
-        <h3>鍓嶇瀹炶返鐨勪环鍊?/h3>
-        <p>杩欎簺 skills 瑕嗙洊鎶€鏈爤銆佺粍浠躲€乁I銆佸姩鏁堛€佹椂闂磋酱銆佺獥鍙ｈ竟鐣屻€丅FF/RAG銆佸浘璋辨€ц兘鍜屼氦浠橀棬绂併€?/p>
+        <h3>前端实践的价值</h3>
+        <p>这些 skills 覆盖技术栈、组件、UI、动效、时间轴、窗口边界、BFF/RAG、图谱性能和交付门禁。</p>
       </div>
     </section>
   </main>
@@ -157,4 +157,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
