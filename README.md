@@ -12,7 +12,7 @@
 
 ## 重要边界
 
-- 完整包会尽量保留 `C:\Users\Admin\final\plugins\light-line` 的插件源码结构。
+- 完整包会尽量保留 `C:\Users\Admin\Light_line\plugins\light-line` 的插件源码结构。
 - 自定义包只包含当前勾选的 skills、commands、hooks，以及必要的插件 manifest、README、索引和选择清单。
 - hooks 只有在 Codex 插件启用、用户信任并具备 Node 运行环境时才会真实进入生命周期。
 - commands 是 pm-skills 风格流程模板；Codex 当前不会把插件 `commands/` 自动注册成原生 slash command。

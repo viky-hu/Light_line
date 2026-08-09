@@ -101,6 +101,7 @@ dd{margin:2px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(34p
 .explain-grid>div{padding:22px;border-right:1px solid var(--ink);min-height:210px}
 .explain-grid>div:last-child{border-right:0}
 .explain-grid h2{font-size:clamp(34px,4vw,58px)}
+.editorial-note h2{font-size:clamp(26px,3vw,40px);line-height:1.15}
 .explain-grid h3{font-size:26px;margin-bottom:10px}
 .explain-grid p{text-align:justify}
 .site-footer{max-width:1440px;margin:0 auto;border:1px solid var(--ink);border-top:0;grid-template-columns:2fr 3fr 2fr}
